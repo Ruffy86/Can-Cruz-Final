@@ -30,8 +30,8 @@ Route::post('/client/store', 'ClientController@store')->name('client.store');
 Route::get('/client/{client}/edit', 'ClientController@edit')->name('client.edit')->middleware('auth');
 Route::put('/client/{client}', 'ClientController@update')->name('client.update')->middleware('auth');
 Route::get('/client/{client}', 'ClientController@show')->name('client.show')->middleware('auth');
-Route::delete('/client/{client}', 'ClientController@index')->name('client.destroy')->middleware('auth');
+Route::delete('/client/{client}', 'ClientController@destroy')->name('client.destroy')->middleware('auth');
 
-Route::get('/client/reservation', 'ClientController@reservation')->name('client.reservation');
+Route::get('/client/{client}/reservation', 'ClientController@reservation')->name('client.reservation');
 Route::get('/room/{client}/selectRoom', 'ClientController@selectRoom')->name('client.selectRoom');
 Route::get('/room/{client}/liberateRoom', 'ClientController@liberateRoom')->name('client.liberateRoom');

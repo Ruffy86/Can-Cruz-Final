@@ -1,9 +1,9 @@
-@extends('layouts.app')
+@extends('layouts.new')
 
 @section('content')
 <div class="container">
         <div class="card-header">
-            <h1>Libreria</h1>
+            <h1>Clientes</h1>
         </div>
         <div>
         <table class="table">

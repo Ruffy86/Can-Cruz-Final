@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.new')
 
 @section('content')
 <div class="container">
@@ -37,13 +37,15 @@
                                 @endforeach
                             </select> 
 
-                            <div class = "form-group">
-                            <label>Fecha de ingreso</label>
-                            <input type="date" name= "Date_From" class = "form-control">
+                            <div>
+                            <span>Fecha de ingreso</span>
+                            <label>*</label>
+                            <input type="date" name= "Date_From" class="arrival">
                             </div>
-                            <div class = "form-group">
-                            <label>Fecha de salida</label>
-                            <input type="date" name= "Date_To" class = "form-control">
+                            <div>
+                            <span>Fecha de salida</span>
+                            <label>" "</label>
+                            <input type="date" name= "Date_To" value="" class="arrival">
                             </div>
                             <input type="submit" value="Reservar habitación" class = "btn btn-primary">
                         </form>

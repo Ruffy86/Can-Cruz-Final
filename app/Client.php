@@ -16,7 +16,7 @@ class Client extends Model
 
     public function rooms()
     {
-        return $this->belongsToMany(Room::class)->withPivot('From', 'To');;
+        return $this->belongsToMany(Room::class)->withPivot('From', 'To');
     }
     public function currentRoom ()
     {

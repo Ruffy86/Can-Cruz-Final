@@ -15,6 +15,7 @@ class ClientController extends Controller
     {
         $clients = Client::all();
         $rooms   = Room::all();
+        //$getDateFrom = DB::table('client_room')->select('From')->where('client_id', '=', $client->id)->first();
         return view ('client.index',compact('clients', 'rooms')); 
     }
 
@@ -39,14 +40,16 @@ class ClientController extends Controller
         
         Client::create($request->all());
         if (Auth::check()) {
+            //dd('No estas logueado');
             return redirect('/client');
         }
         $lastInsertId = DB::getPdo()->lastInsertId();
         $client = Client::find($lastInsertId);
         //dd($client);
-        $rooms   = Room::all();
-        return view('client.reservation', compact('client', 'rooms'));
-        //return redirect(route('client.reservation'));
+        
+        
+        //return view('client/reservation', compact('client', 'rooms'));
+        return redirect(route('client.reservation', $client));
     }
 
     /**
@@ -97,9 +100,12 @@ class ClientController extends Controller
         return redirect(route('client.index'));
     }
 
-    public function reservation()
+    public function reservation(Client $client)
     {   
-        return view('client.reservation');
+        
+        //dd($client);
+        $rooms   = Room::all();
+        return view('client.reservation', compact('client', 'rooms'));
     }
     public function selectRoom(Request $request, Client $client){
 
@@ -108,6 +114,7 @@ class ClientController extends Controller
         $client->rooms()->attach($request->id, ['From'=>$request->Date_From, 'To'=>$request->Date_To]);
 
         return redirect(route('client.index'));
+        
     }
     
     public function liberateRoom(Client $client){

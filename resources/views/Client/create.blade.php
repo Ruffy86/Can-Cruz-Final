@@ -1,30 +1,22 @@
-@extends('layouts.app')
+@extends('layouts.new')
 
 @section('content')
 <div class="container">
     <div class="card-header">Nuevo</div>
-        <div class="card-body">
-            <form action="{{Route('client.store')}}" method="POST">
-                @csrf
-                <div class="form-group">
-                    <div class="form-group">
-                        <label>Nombre</label>
-                        <input type="text" name="name" class="form-control">
-                    </div>
-                    <div class="form-group">
-                        <label>Telefono</label>
-                        <input type="text" name="phone" class="form-control">
-                    </div>
-                    <div class="form-group">
-                        <label>Mail</label>
-                        <input type="text" name="email" class="form-control">
-                    </div>
-                </div>
-            
+            <div class="booking-form">
+				<div class="col-md-6">			 
+					<form action="{{Route('client.store')}}" method="POST">
+                    @csrf
+                        <h5>Nombre</h5>
+						<input type="text" name="name" value="">
+						<h5>Telefono</h5>
+						<input type="text" name="phone" value="">
+                        <h5>Email</h5>
+                        <input type="text" name="email" value="">
+                        <input type="submit" value="Crear" class = "btn btn-primary">
+					</form>
+				</div>
             </div>
-                <div class="card-footer">
-                <input type="submit" value="Crear" class = "btn btn-primary">
-            </div>
-        </form>
+    
 </div>
 @endsection

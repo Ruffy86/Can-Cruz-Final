@@ -1,101 +1,142 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.new')
 
-        <title>Laravel</title>
+@section('content')
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+<!-- banner -->
+			
+<body>
 
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
-                margin: 0;
-            }
-
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 13px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://vapor.laravel.com">Vapor</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div><br>
-
-            </div>
+	<!-- banner -->
+	<div class="banner-info">
         </div>
-    </body>
-</html>
+	<!-- hod -->
+	<div class="hod">
+		<div class="container">
+			<div class="col-md-6 hod-left">
+				<img src="images/14.jpg" class="img-responsive" alt="">
+			</div>
+			<div class="col-md-6 hod-right">
+				<h2>Publishing packages and web page</h2>
+				<p>The point of using as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' </p>
+				<p>Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here',</p>
+				<a class="hvr-shutter-in-horizontal" href="details.html">Book Now</a>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+	<!-- hod -->
+	<!-- tels -->
+	<div class="tels">
+		<div class="container">
+			<div class="col-md-4 tels-left">
+				<h4>Single room <span>110$</span></h4>
+				<img src="images/4.jpg" class="img-responsive" alt="">
+				<p>Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here',</p>
+				<a class="hvr-shutter-in-horizontal" href="details.html">Book Now</a>
+			</div>
+			<div class="col-md-4 tels-left">
+				<h4>Double room <span>150$</span></h4>
+				<img src="images/9.jpg" class="img-responsive" alt="">
+				<p>Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here',</p>
+				<a class="hvr-shutter-in-horizontal" href="details.html">Book Now</a>
+			</div>
+			<div class="col-md-4 tels-left">
+				<h4>Private room <span>200$</span></h4>
+				<img src="images/3.jpg" class="img-responsive" alt="">
+				<p>Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here',</p>
+				<a class="hvr-shutter-in-horizontal" href="details.html">Book Now</a>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+	<!-- tels -->
+	<!-- special -->
+	<div class="special">
+
+	</div>
+	<!-- special -->
+	<!-- quick -->
+	<div class="quick">
+		<div class="container">
+			<div class="col-md-4 quick-left">
+				<h3>Most Popular</h3>
+					<ul>
+						<li><a href="#">Distribution of letters, as opposed</a></li>
+						<li><a href="#">Distribution of letters, as opposed</a></li>
+						<li><a href="#">Distribution of letters, as opposed</a></li>
+						<li><a href="#">Distribution of letters, as opposed</a></li>
+						<li><a href="#">Distribution of letters, as opposed</a></li>
+					</ul>
+			</div>
+			<div class="col-md-4 quick-left">
+				<h3>News & Events</h3>
+				<div class="new">
+					<div class="n-lft">
+						<h5>10</h5>
+						<h6>Sep</h6>
+					</div>
+					<div class="n-rgt">
+						<p>Lorem Ipsum is that it has a more-or-less normal<a href="#">More</a></p>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+				<div class="new-1">
+					<div class="n-lft">
+						<h5>15</h5>
+						<h6>Sep</h6>
+					</div>
+					<div class="n-rgt">
+						<p>That it has a more-or-less normal distribution<a href="#">More</a></p>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+			<div class="col-md-4 quick-left">
+				<h3>Quick Message</h3>
+					<form>
+						<input type="text" class="textbox" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}">
+						<textarea placeholder="" onfocus="this.value='';" onblur="if (this.value == '') {this.value = 'Message';}">Message</textarea>
+						<input type="submit" value="Submit">
+					</form>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+	<!-- quick -->
+<!-- footer -->
+	<div class="footer">
+		<div class="container">
+			<div class="col-md-2 deco">
+				<h4>Navigation</h4>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="shortcodes.html">Short Codes </a></li>
+				<li><a href="sigin.html">Sign in</a></li> 
+				<li><a href="contact.html">Contact</a></li>
+			</div>
+			<div class="col-md-2 deco">
+				<h4>Links</h4> 
+				<li><a href="#">Qui Sommes-Nous ?</a></li>
+				<li><a href="#">Mentions Légales </a></li>
+				<li><a href="#">Conditions D'Utilisation </a></li>
+			</div>
+			<div class="col-md-2 deco">
+				<h4>Social</h4>
+				<div class="soci">
+					<li><a href="#"><i class="f-1"> </i></a></li>
+					<li><a href="#"><i class="t-1"> </i></a></li>
+					<li><a href="#"><i class="g-1"> </i></a></li>
+				</div>
+			</div>
+			<div class="col-md-3 cardss">
+				<h4>Payment Sécure</h4>
+				<li><i class="visa"></i></li>
+				<li><i class="ma"></i></li>
+				<li><i class="paypal"></i></li>
+				<div class="clearfix"> </div>
+			</div>
+			
+	</div>
+	
+	<!-- footer -->
+</body>
+@endsection
